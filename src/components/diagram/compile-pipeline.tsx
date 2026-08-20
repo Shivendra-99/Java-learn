@@ -90,7 +90,7 @@ export function CompilePipeline({
       <div className="border-b bg-muted/40 px-4 py-2.5 text-sm font-medium text-foreground">{title}</div>
 
       <div className="space-y-3 p-4">
-        <ol className="flex flex-col gap-2 sm:flex-row sm:items-stretch">
+        <ol className="flex flex-col gap-2 sm:flex-row sm:items-stretch lg:grid lg:grid-cols-2">
           {stages.map((stage, stageIndex) => {
             const Icon = stage.icon
             const isActive = stageIndex === index
@@ -122,7 +122,7 @@ export function CompilePipeline({
                   <span className="text-[11px] text-muted-foreground">{stage.sublabel}</span>
                 </button>
                 {stageIndex < stages.length - 1 ? (
-                  <span className="hidden shrink-0 text-muted-foreground sm:inline" aria-hidden="true">
+                  <span className="hidden shrink-0 text-muted-foreground sm:inline lg:hidden" aria-hidden="true">
                     →
                   </span>
                 ) : null}
